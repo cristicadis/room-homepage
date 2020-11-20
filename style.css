@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 500;
+  font-size:14px;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+}
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+#page-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 997;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.content-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.left {
+   background-image: url("images/desktop-image-hero-1.jpg");
+   position: relative;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+
+.menu-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.logo { padding: 40px 0; }
+
+.logo img {
+  width: 80px;
+}
+
+.menu {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu a {
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 25px;
+  color: hsl(0, 0%, 100%);
+}
+
+.menu a::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin:auto;
+  height: 2px;
+  background-color: hsl(0, 0%, 100%);
+  content: " ";
+  width: 25px;
+  margin-top: 12px;
+  opacity: 0;
+}
+
+.menu a:hover::after {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.right {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+.right h1 {
+  margin: 30px 50px 30px 90px;
+  font-size: 35px;
+}
+
+
+
+.text {
+  font-size: 12px;
+  line-height: 1.8;
+  margin-left: 90px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  color: hsl(0, 0%, 63%);
+}
+
+.shop-now {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 90px;
+  cursor: pointer;
+}
+
+.shop-now:hover {
+  color:hsl(0, 0%, 63%);
+  -webkit-filter: invert(69%) sepia(8%) saturate(7%) hue-rotate(311deg) brightness(91%) contrast(93%);
+  filter: invert(69%) sepia(8%) saturate(7%) hue-rotate(311deg) brightness(91%) contrast(93%);
+ }
+
+.shop-now p {
+  letter-spacing: 8px;
+  margin-right: 35px;
+  word-spacing: 14px;
+  font-weight: 600;
+}
+
+
+.angle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+
+.angle-left,
+.angle-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: hsl(0, 0%, 0%);
+}
+
+
+.angle-left:hover,
+.angle-right:hover {
+  background-color: hsl(0, 0%, 27%);
+  cursor: pointer;
+}
+
+.content-bottom {  display: -webkit-box;  display: -ms-flexbox;  display: flex;  }
+
+.image1 {
+  background-image: url("images/image-about-dark.jpg");
+  width: 360px;
+  height: 240px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.textmdl {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 55px 40px 0;
+}
+
+.b_title {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  margin-bottom: 12px;
+  color: hsl(0, 0%, 27%);
+}
+
+.b_text {
+  color: hsl(0, 0%, 63%);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.image2 {
+  background-image: url("images/image-about-light.jpg");
+  width: 360px;
+  height: 240px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media only screen and (min-width:800px) {
+  .left {
+    width: 780px;
+    height: 500px;
+  }
+
+  .logo img {
+    margin-left: 60px;
+    margin-right: 50px;
+  }
+
+  .hamburger {display: none;}
+
+}
+
+
+@media only screen and (max-width:800px) {
+ .container {
+    width: auto;
+  }
+
+  .content-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .left {
+    background-image: url("images/mobile-image-hero-1.jpg");
+    background-size: cover;
+    width: auto;
+    height:500px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  .menu a {
+    color:hsl(0, 0%, 27%);
+    display: inline-block;
+
+  }
+
+  .menu {
+    z-index: 998;
+    position: absolute;
+    text-align:right;
+    display: none;
+    background-color: hsl(0, 0%, 100%);
+    height: 100px;
+    width: 100%;
+  }
+
+  .hamburger {
+    position: absolute;
+    left: 60px;
+    cursor: pointer;
+    z-index: 999;
+    top:40px;
+  }
+
+  .right h1 {
+    margin: 50px 50px 30px 50px;
+  }
+
+  .text {
+    margin: 20px 50px 30px 50px;
+  }
+
+  .angle {
+    top:-80px;
+    right: 0;
+  }
+
+  .shop-now {
+    margin-left: 50px;
+    margin-bottom: 30px;
+  }
+
+  .content-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .image1,
+  .image2 {
+    width: 100%;
+    background-position: center;
+  }
+
+ .textmdl {
+   padding: 40px 50px ;
+ }
+
+}
